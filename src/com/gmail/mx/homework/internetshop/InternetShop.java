@@ -1,4 +1,4 @@
-package com.gmail.mx.homework;
+package com.gmail.mx.homework.internetshop;
 
 public class InternetShop {
     public static void main(String[] args) {
@@ -45,4 +45,4 @@ public class InternetShop {
     }
 
 
-    }
+}
