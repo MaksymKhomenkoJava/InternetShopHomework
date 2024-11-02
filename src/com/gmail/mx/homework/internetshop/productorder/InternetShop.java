@@ -1,4 +1,4 @@
-package com.gmail.mx.homework.internetshop;
+package com.gmail.mx.homework.internetshop.productorder;
 
 public class InternetShop {
     public static void main(String[] args) {
