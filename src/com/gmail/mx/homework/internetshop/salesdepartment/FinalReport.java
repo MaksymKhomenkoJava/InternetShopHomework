@@ -3,43 +3,37 @@ package com.gmail.mx.homework.internetshop.salesdepartment;
 public class FinalReport {
     public static void main(String[] args) {
 
+        System.out.println();
         byte number = 1;
         String product = "smartphone";
         double price = 305.99;
-        String currency = "EUR";
-        byte unitDay = 8;
-        byte day = 7;
+        int unitWeek = 24;
         byte mouth = 30;
-        String totalWeek = "week: ";
-        String totalMonth = "month: ";
-
-        double result = price*unitDay;
-        totalWeek += result*day;
-        totalMonth += result*mouth;
+        double totalWeek = unitWeek*price;
+        double totalDay = totalWeek/7;
+        double totalMonth = totalDay*mouth;
 
         System.out.println("Product N " + number + " " + product + ".");
-        System.out.println("Sales for day:" + " " + result + " " + currency);
-        System.out.println("Sales for " + " " + totalWeek + " " + currency);
-        System.out.println("Total Sales for " + " " + totalMonth + " " + currency);
+        System.out.printf("Sales for week EUR: = %.2f\n", totalWeek );
+        System.out.printf("Sales for day EUR: = %.2f\n", totalDay );
+        System.out.printf("Sales for mouth EUR: = %.2f\n", totalMonth );
+        System.out.println();
 
-        number++;
+
+        number ++;
         product = "laptop";
         price = 570.95;
-        currency = "EUR";
-        unitDay = 4;
-        day = 7;
+        unitWeek = 34;
         mouth = 30;
-        totalWeek = "week: ";
-        totalMonth = "month: ";
-
-        result = price*unitDay;
-        totalWeek += result*day;
-        totalMonth += result*mouth;
+        totalWeek = unitWeek*price;
+        totalDay = totalWeek/7;
+        totalMonth = totalDay*mouth;
 
         System.out.println("Product N " + number + " " + product + ".");
-        System.out.println("Sales for day:" + " " + result + " " + currency);
-        System.out.println("Sales for " + " " + totalWeek + " " + currency);
-        System.out.println("Total Sales for " + " " + totalMonth + " " + currency);
+        System.out.printf("Sales for week EUR: = %.2f\n", totalWeek );
+        System.out.printf("Sales for day EUR: = %.2f\n", totalDay );
+        System.out.printf("Sales for mouth EUR: = %.2f\n", totalMonth );
+
 
 
 
