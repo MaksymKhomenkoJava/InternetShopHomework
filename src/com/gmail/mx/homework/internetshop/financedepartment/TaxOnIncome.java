@@ -13,12 +13,15 @@ public class TaxOnIncome {
 
 
         if (income <= 10000) {
-            System.out.println("Tax rate 2.5% amount to be paid: " + income * 0.025 + " " + "EUR");
+            System.out.println("Tax rate 2.5% ");
+            System.out.printf("amount to be paid EUR: %.2f",income * 0.025);
         } else {
             if (income <= 25000) {
-            System.out.println("Tax rate 4.3% amount to be paid: " + income * 0.043 + " " + "EUR");
+            System.out.println("Tax rate 4.3% ");
+            System.out.printf("amount to be paid EUR: %.2f",income * 0.043);
         } else {
-            System.out.println("Tax rate 6.7% amount to be paid: " + income * 0.067 + " " + "EUR");
+            System.out.println("Tax rate 6.7% ");
+            System.out.printf("amount to be paid EUR: %.2f",income * 0.067);
             }
         }
         }
