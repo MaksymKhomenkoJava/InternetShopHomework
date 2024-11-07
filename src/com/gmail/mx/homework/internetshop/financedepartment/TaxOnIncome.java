@@ -10,24 +10,26 @@ public class TaxOnIncome {
         System.out.println("Enter the income amount:");
         Scanner scanner = new Scanner(System.in);
         double income = scanner.nextDouble();
-        double minimumRate = 0.025;
-        double maximumRate = 0.043;
-        double mediumRate = 0.067;
 
         if (income <= 10000) {
-            System.out.println("Tax rate 2.5% ");
-            System.out.printf("Tax amount EUR: %.2f\n",income * minimumRate);
+            double minimumRate = 0.025;
+            double betAmount = Math.round(income * minimumRate);
+            System.out.println("Tax rate 2.5% amount EUR: " + betAmount);
+
+        } else if (income <= 25000) {
+            double mediumRate = 0.043;
+            double betAmount = Math.round(income * mediumRate);
+            System.out.println("Tax rate 4.3% amount EUR: " + betAmount);
+
         } else {
-            if (income <= 25000) {
-            System.out.println("Tax rate 4.3% ");
-            System.out.printf("Tax amount EUR: %.2f\n",income * mediumRate);
-        } else {
-            System.out.println("Tax rate 6.7% ");
-            System.out.printf("Tax amount EUR: %.2f\n",income * maximumRate);
-            }
-        }
+            double maximumRate = 0.067;
+            double betAmount = Math.round(income * maximumRate);
+            System.out.println("Tax rate 6.7% amount EUR: " + betAmount);
+
         }
     }
+}
+
 
 
 
