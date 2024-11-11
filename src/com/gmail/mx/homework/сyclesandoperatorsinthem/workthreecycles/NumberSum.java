@@ -35,12 +35,12 @@ public class NumberSum {
         if (num == 0) {
             return;
         }
- //       int i = 1;
+        i = 1;
         do {
-            sum =0;
+
+            sum = 0;
             sum += i;
             System.out.println(i + ") Num is " + i + " sum is " + sum);
-
             i++;
         } while (i <= num);
         System.out.println("..............................");
