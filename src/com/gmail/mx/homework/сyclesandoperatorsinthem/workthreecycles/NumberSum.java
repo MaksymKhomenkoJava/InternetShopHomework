@@ -36,9 +36,9 @@ public class NumberSum {
             return;
         }
         i = 1;
+        sum = 0;
         do {
 
-            sum = 0;
             sum += i;
             System.out.println(i + ") Num is " + i + " sum is " + sum);
             i++;
