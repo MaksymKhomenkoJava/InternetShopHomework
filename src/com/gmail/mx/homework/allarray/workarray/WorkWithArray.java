@@ -1,9 +1,19 @@
 package com.gmail.mx.homework.allarray.workarray;
 
+import java.util.Arrays;
+
 public class WorkWithArray {
     public static void main(String[] args) {
 
-        int [] numbers = new int[]{1,-2,-12,3,4,-5,60,7,81,9,-10};
+        int a = (int) (Math.random() * 200 - 100);
+
+        System.out.println("Number : " + a);
+
+
+        int[] numbers = {1, -2, -12, 3, 4, -5, 60, 7, 81, 9, -10};
+        for (int current : numbers) {
+            System.out.println("Elements:" + current);
+        }
 
         System.out.println("Elements array numbers: ");
         int sum = 0;
@@ -16,7 +26,7 @@ public class WorkWithArray {
 
         int max = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i]>max) {
+            if (numbers[i] > max) {
                 max = numbers[i];
             }
         }
