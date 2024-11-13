@@ -30,6 +30,26 @@ public class WorkWithArray {
         }
         System.out.println("Max number array: " + min + "[" + index + "]");
 
+        int a = 0;
+        int b = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                a++;
+            }
+            if (numbers[i] % 2 != 0) {
+                b++;
+            }
+        }
+        System.out.println("Even numbers: " + a);
+        System.out.println("Odd numbers: " + b);
+
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                sum += numbers[i];
+            }
+        }
+        System.out.println("Sum of negative numbers: " + sum);
 
     }
 }
