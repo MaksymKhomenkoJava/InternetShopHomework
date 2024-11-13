@@ -19,7 +19,7 @@ public class WorkWithArray {
                 index = i;
             }
         }
-        System.out.println("Max number array: " + max + "[" + index + "]");
+        System.out.println("Max array element: " + max + "[" + index + "]");
 
         int min = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
@@ -28,7 +28,7 @@ public class WorkWithArray {
                 index = i;
             }
         }
-        System.out.println("Max number array: " + min + "[" + index + "]");
+        System.out.println("Min array element: " + min + "[" + index + "]");
 
         int a = 0;
         int b = 0;
@@ -40,8 +40,8 @@ public class WorkWithArray {
                 b++;
             }
         }
-        System.out.println("Even numbers: " + a);
-        System.out.println("Odd numbers: " + b);
+        System.out.println("Even array element:: " + a);
+        System.out.println("Odd array element: " + b);
 
         int sum = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -49,7 +49,7 @@ public class WorkWithArray {
                 sum += numbers[i];
             }
         }
-        System.out.println("Sum of negative numbers: " + sum);
+        System.out.println("Sum of negative array element:: " + sum);
 
     }
 }
