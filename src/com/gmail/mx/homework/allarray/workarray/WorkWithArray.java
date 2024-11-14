@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class WorkWithArray {
     public static void main(String[] args) {
-// масив з випадкових цілих чисел
+
         System.out.println("1. Elements array: ");
         int[] numbers = new int[20];
         for (int i = 0; i < numbers.length; i++) {
@@ -12,7 +12,7 @@ public class WorkWithArray {
             System.out.println("index [" + i + "]" + " number " + numbers[i]);
         }
         System.out.println(" ");
-// мінімальний та максимальний елемент масиву
+
         int max = numbers[0];
         int min = numbers[0];
         int indexmax = 0;
@@ -30,7 +30,7 @@ public class WorkWithArray {
         System.out.println("2. Max array element: " + max + "[" + indexmax + "]");
         System.out.println("3. Min array element: " + min + "[" + indexmin + "]");
         System.out.println(" ");
-// парні та непарні числа
+
         int a = 0;
         int b = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -44,7 +44,7 @@ public class WorkWithArray {
         System.out.println("4. Even array element: " + a);
         System.out.println("5. Odd array element: " + b);
         System.out.println(" ");
-// сума від'ємних чисел
+
         int sum = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] < 0) {
@@ -53,7 +53,7 @@ public class WorkWithArray {
         }
         System.out.println("6. Sum of negative array element: " + sum);
         System.out.println(" ");
-// перший від'ємний, сума елементів після першого від'ємного, сума всіх елементів
+
         a = 0;
         b = 0;
         while (a >= 0 && a < 20) {
@@ -61,7 +61,7 @@ public class WorkWithArray {
                 a = numbers[a];
             }
             a++;
-            b++; //порахує індекс першого від'ємного елементу
+            b++;
         }
         System.out.println("7. first negative number:" + (a - 1));
         int sum1 = 0;
@@ -70,9 +70,9 @@ public class WorkWithArray {
         }
         System.out.println("8. Sum of numbers after the first negative:" + sum1);
 
-        int serarefmet = sum1/(numbers.length-b);
+        int average = sum1/(numbers.length-b);
 
-        System.out.println("9. Serarefmet: " + serarefmet);
+        System.out.println("9. Arithmetic average : " + average);
 
         int sumarray = 0;
         for (int i = 0; i < numbers.length; i++) {
