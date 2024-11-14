@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class WorkWithArray {
     public static void main(String[] args) {
-// масив з випадкових цылих чисел
+// масив з випадкових цілих чисел
         System.out.println("1. Elements array: ");
         int[] numbers = new int[20];
         for (int i = 0; i < numbers.length; i++) {
@@ -12,7 +12,7 @@ public class WorkWithArray {
             System.out.println("index [" + i + "]" + " number " + numbers[i]);
         }
         System.out.println(" ");
-// мынымальний та максимальний елемент масиву
+// мінімальний та максимальний елемент масиву
         int max = numbers[0];
         int min = numbers[0];
         int indexmax = 0;
@@ -53,7 +53,7 @@ public class WorkWithArray {
         }
         System.out.println("6. Sum of negative array element: " + sum);
         System.out.println(" ");
-// перше негативне, сума елементів після першої негативної, сума всіх улементів
+// перший від'ємний, сума елементів після першого від'ємного, сума всіх елементів
         a = 0;
         b = 0;
         while (a >= 0 && a < 20) {
@@ -61,20 +61,24 @@ public class WorkWithArray {
                 a = numbers[a];
             }
             a++;
-            b++;
+            b++; //порахує індекс першого від'ємного елементу
         }
-        System.out.println("first negative number:" + (a - 1));
+        System.out.println("7. first negative number:" + (a - 1));
+        int sum1 = 0;
+        for (int i = b ; i < numbers.length; i++) {
+            sum1 += numbers[i];
+        }
+        System.out.println("8. Sum of numbers after the first negative:" + sum1);
 
-        for (int i = b + 1; i < numbers.length; i++) {
-            sum += numbers[i];
-        }
-        System.out.println("Sum of numbers after the first negative:" + sum);
+        int serarefmet = sum1/(numbers.length-b);
+
+        System.out.println("9. Serarefmet: " + serarefmet);
 
         int sumarray = 0;
         for (int i = 0; i < numbers.length; i++) {
             sumarray += numbers[i];
         }
-        System.out.println("Sumarray all element: " + sumarray);
+        System.out.println("10. Sum array all element: " + sumarray);
     }
 
 
