@@ -12,33 +12,47 @@ public class SortAndSearch {
         int numeric = scanner.nextInt();
         int[] array = new int[numeric];
 
-        System.out.print("Array: [");
+        System.out.print("Array: ");
+        System.out.println(" ");
 
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 100);
             System.out.print(array[i] + " ");
         }
-        System.out.print(" ]");
         System.out.println();
 
-        int n = array.length;
-        int minIndex = 0;
-        for (int i = 0; i < n - 1; i++) {
-            for (int k = i + 1; k < n; k++) {
-                minIndex = i;
-                if (array[k] < array[i]) {
-                    minIndex = k;
-                }
-                if (minIndex != i) {
-                    int a = array[i];
-                    array[i] = array[k];
-                    array[k] = a;
-                    System.out.print(" "+array[k]+" ");
-                }
+        System.out.print("Array Insertion Sort: ");
+        System.out.println(" ");
+        for (int i = 0; i < array.length; i++) {
+            int key = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = key;
+        }
+        for (int j = 0; j < array.length; j++)
 
+            System.out.print(array[j] + " ");
+        System.out.println(" ");
 
+//        Scaner enternumber = new Scanner(System.in);
+//        int x = enternumber.nextInt();
+        int x = 24;
+        int xIndex = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == x) {
+                xIndex = i;
+                break;
             }
 
         }
-            }
+        System.out.print("Nuber in array of Index:\n");
+        System.out.print(xIndex);
+
+    }
+
+
 }
+

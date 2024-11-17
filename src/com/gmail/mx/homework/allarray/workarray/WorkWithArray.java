@@ -22,7 +22,7 @@ public class WorkWithArray {
                 maxElement = numbers[i];
                 indexMax = i;
             }
-            else if (numbers[i] < minElement) {
+           if (numbers[i] < minElement) {
                 minElement = numbers[i];
                 indexMin = i;
             }
