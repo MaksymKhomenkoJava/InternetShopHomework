@@ -13,36 +13,35 @@ public class WorkWithArray {
         }
         System.out.println(" ");
 
-        int maxElement = numbers[0];
-        int minElement = numbers[0];
-        int indexMax = 0;
+        int maxIndex = 0;
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > numbers[maxIndex]) {
+                maxIndex = i;
+            }
+        }
+        System.out.println("2. Max array element: " + numbers[maxIndex] + "[" + maxIndex + "]");
+
         int indexMin = 0;
         for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] > maxElement) {
-                maxElement = numbers[i];
-                indexMax = i;
-            }
-           if (numbers[i] < minElement) {
-                minElement = numbers[i];
-                indexMin = i;
+            if (numbers[i] < numbers[indexMin]) {
+                              indexMin = i;
             }
         }
-        System.out.println("2. Max array element: " + maxElement + "[" + indexMax + "]");
-        System.out.println("3. Min array element: " + minElement + "[" + indexMin + "]");
+        System.out.println("3. Min array element: " + numbers[indexMin] + "[" + indexMin + "]");
         System.out.println(" ");
 
-        int evenElement = 0;
-        int oddElement = 0;
+        int evenElements = 0;
+        int oddElements = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] % 2 == 0) {
-                evenElement++;
+                evenElements++;
             }
             if (numbers[i] % 2 != 0) {
-                oddElement++;
+                oddElements++;
             }
         }
-        System.out.println("4. Even array element: " + evenElement);
-        System.out.println("5. Odd array element: " + oddElement);
+        System.out.println("4. Even array element: " + evenElements);
+        System.out.println("5. Odd array element: " + oddElements);
         System.out.println(" ");
 
         int sumNegative = 0;
@@ -65,12 +64,12 @@ public class WorkWithArray {
         }
         System.out.println("7. first negative number:" + (a - 1));
         int sumAfterFirst = 0;
-        for (int i = b ; i < numbers.length; i++) {
+        for (int i = b; i < numbers.length; i++) {
             sumAfterFirst += numbers[i];
         }
         System.out.println("8. Sum of numbers after the first negative: " + sumAfterFirst);
 
-        int average = sumAfterFirst/(numbers.length-b);
+        int average = sumAfterFirst / (numbers.length - b);
 
         System.out.println("9. Arithmetic average : " + average);
 
