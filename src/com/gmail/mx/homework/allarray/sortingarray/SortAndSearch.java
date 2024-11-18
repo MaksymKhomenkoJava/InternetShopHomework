@@ -36,10 +36,10 @@ public class SortAndSearch {
 
             System.out.print(array[j] + " ");
         System.out.println(" ");
+        System.out.println("Enter number x: ");
 
-//        Scaner enternumber = new Scanner(System.in);
-//        int x = enternumber.nextInt();
-        int x = 24;
+        int number = scanner.nextInt();
+        int x = number;
         int xIndex = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == x) {
@@ -48,7 +48,7 @@ public class SortAndSearch {
             }
 
         }
-        System.out.print("Nuber in array of Index:\n");
+        System.out.print("Index number of a number in a sorted array:\n");
         System.out.print(xIndex);
 
     }

@@ -56,7 +56,7 @@ public class WorkWithArray {
 
         int a = 0;
         int b = 0;
-        while (a >= 0 && a < numbers.length) {
+        while (a >= 0) {
             if (numbers[a] < 0) {
                 a = numbers[a];
             }
