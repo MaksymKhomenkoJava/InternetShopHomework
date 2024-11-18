@@ -34,25 +34,30 @@ public class SortAndSearch {
         }
         for (int j = 0; j < array.length; j++)
 
+
             System.out.print(array[j] + " ");
         System.out.println(" ");
         System.out.println("Enter number x: ");
 
         int number = scanner.nextInt();
-        int x = number;
-        int xIndex = 0;
+        int arrayInd = -1;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == x) {
-                xIndex = i;
+            if (array[i] == number) {
+                arrayInd = i;
                 break;
             }
-
         }
-        System.out.print("Index number of a number in a sorted array:\n");
-        System.out.print(xIndex);
-
+        if (arrayInd == -1) {
+            System.out.print("Value not found");
+        } else {
+            System.out.print("Index number of a number in a sorted array:\n");
+            System.out.print(arrayInd);
+        }
     }
 
 
 }
+
+
+
 
