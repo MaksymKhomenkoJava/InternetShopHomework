@@ -1,5 +1,6 @@
 package com.gmail.mx.homework.allarray.sortingarray;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -32,30 +33,59 @@ public class SortAndSearch {
             }
             array[j + 1] = key;
         }
-        for (int j = 0; j < array.length; j++)
-
-
+        for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + " ");
+        }
         System.out.println(" ");
         System.out.println("Enter number x: ");
 
         int number = scanner.nextInt();
-        int arrayInd = -1;
+
+        System.out.println("Binary search:");
+        int position = binarySort(array, number);
+        if (position == 1) {
+            System.out.print("Value not found");
+        } else {
+            System.out.printf("%d at position %d\n", number, position);
+
+        }
+        System.out.println(" ");
+        System.out.println("____________________________________________ ");
+        System.out.println("Check selection:");
+
+        int arrayIndex = -1;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == number) {
-                arrayInd = i;
+                arrayIndex = i;
                 break;
             }
         }
-        if (arrayInd == -1) {
+        if (arrayIndex == -1) {
             System.out.print("Value not found");
         } else {
-            System.out.print("Index number of a number in a sorted array:\n");
-            System.out.print(arrayInd);
+            System.out.print("Index number sorted array:\n");
+            System.out.print(arrayIndex);
+            System.out.println(" ");
+            System.out.println("___________________________________________ ");
         }
+
     }
 
-
+    public static int binarySort(int[] array, int number) {
+        int left = 0;
+        int right = array.length - 1;
+        do {
+            int middle = (left + right) / 2;
+            if (array[middle] > number) {
+                right = middle - 1;
+            } else if (array[middle] < number) {
+                left = middle + 1;
+            } else {
+                return middle;
+            }
+        } while (left <= right);
+        return +1;
+    }
 }
 
 
