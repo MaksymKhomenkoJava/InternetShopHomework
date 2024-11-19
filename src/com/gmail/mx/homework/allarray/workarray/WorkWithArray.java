@@ -16,18 +16,21 @@ public class WorkWithArray {
         int maxIndex = 0;
         for (int i = 1; i < numbers.length; i++) {
             if (numbers[i] > numbers[maxIndex]) {
+                numbers[maxIndex] = numbers[i];
                 maxIndex = i;
             }
         }
         System.out.println("2. Max array element: " + numbers[maxIndex] + "[" + maxIndex + "]");
 
-        int indexMin = 0;
+        int minIndex = 0;
         for (int i = 1; i < numbers.length; i++) {
-            if (numbers[i] < numbers[indexMin]) {
-                              indexMin = i;
+            if (numbers[i] < numbers[minIndex]) {
+                numbers[minIndex] = numbers[i];
+                minIndex = i;
+
             }
         }
-        System.out.println("3. Min array element: " + numbers[indexMin] + "[" + indexMin + "]");
+        System.out.println("3. Min array element: " + numbers[minIndex] + "[" + minIndex + "]");
         System.out.println(" ");
 
         int evenElements = 0;
