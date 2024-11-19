@@ -22,41 +22,50 @@ public class MultiDimensionArrays {
         }
         System.out.println();
 
-        int sumLine;
-        for (int i = 0; i < matrix.length; i=i+2) {
-            sumLine = 0;
+        int sumParLine;
+        for (int i = 0; i < matrix.length; i = i + 2) {
+            sumParLine = 0;
             for (int j = 0; j < matrix.length; j++) {
-                sumLine += matrix[i][j];
+                sumParLine += matrix[i][j];
             }
-            System.out.println(i + " SumLine: " + sumLine);
+            System.out.println(i + " SumParLine: " + sumParLine);
 
         }
         System.out.println();
 
-        int sumColum;
-        for (int j = 0; j < matrix.length; j++) {
-            sumColum = 0;
+        int sumUnParLine;
+        for (int i = 1; i < matrix.length; i = i + 2) {
+            sumUnParLine = 0;
+            for (int j = 0; j < matrix.length; j++) {
+                sumUnParLine += matrix[i][j];
+            }
+            System.out.println(i + " SumUnParLine: " + sumUnParLine);
+        }
+        System.out.println();
+
+        int multParColum;
+        for (int j = 0; j < matrix.length; j = j + 2) {
+            multParColum = 1;
             for (int i = 0; i < matrix.length; i++) {
-                sumColum += matrix[i][j];
+                multParColum = multParColum * matrix[i][j];
 
             }
-            System.out.println(j + " SumColum: " + sumColum);
+            System.out.println(j + " MultParColum: " + multParColum);
+        }
+        System.out.println();
+        int multUnParColum;
+        for (int j = 1; j < matrix.length; j = j + 2) {
+            multUnParColum = 1;
+            for (int i = 0; i < matrix.length; i++) {
+                multUnParColum = multUnParColum * matrix[i][j];
+
+            }
+            System.out.println(j + " MultParColum: " + multUnParColum);
         }
         System.out.println();
 
 
-//        for (int i = 0; i < matrix.length; i++) {
-//            int sumLine = 0;
-//            for (int j = 0; j < matrix.length; j++) {
-//                if (matrix[i][j] % 2 == 0) {
-//                    sumLine += matrix[i][j];
-//                } else {
-//                    break;
-//                }
-//            }
-//            System.out.println(i + " SumLine: " + sumLine);
 
-//        }
 
     }
 }
