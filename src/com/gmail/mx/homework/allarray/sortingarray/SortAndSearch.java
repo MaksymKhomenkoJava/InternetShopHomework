@@ -43,7 +43,7 @@ public class SortAndSearch {
 
         System.out.println("Binary search:");
         int position = binarySort(array, number);
-        if (position == 1) {
+        if (position == -1) {
             System.out.print("Value not found");
         } else {
             System.out.printf("%d at position %d\n", number, position);
@@ -84,7 +84,7 @@ public class SortAndSearch {
                 return middle;
             }
         } while (left <= right);
-        return +1;
+        return -1;
     }
 }
 

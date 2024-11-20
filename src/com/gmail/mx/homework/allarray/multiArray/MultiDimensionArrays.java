@@ -60,11 +60,9 @@ public class MultiDimensionArrays {
                 multUnParColum = multUnParColum * matrix[i][j];
 
             }
-            System.out.println(j + " MultParColum: " + multUnParColum);
+            System.out.println(j + " MultUnParColum: " + multUnParColum);
         }
         System.out.println();
-
-
 
 
     }
