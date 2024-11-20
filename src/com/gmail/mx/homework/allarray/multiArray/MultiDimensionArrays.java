@@ -15,32 +15,35 @@ public class MultiDimensionArrays {
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
-                matrix[i][j] = (int) (Math.random() * 50);
+                matrix[i][j] = (int) (Math.random() * 50+1);
                 System.out.print(matrix[i][j] + "\t");
             }
             System.out.println();
         }
         System.out.println();
 
-        int sumParLine;
+        int totalSumParLine = 0;
         for (int i = 0; i < matrix.length; i = i + 2) {
-            sumParLine = 0;
+            int sumParLine = 0;
             for (int j = 0; j < matrix.length; j++) {
                 sumParLine += matrix[i][j];
             }
             System.out.println(i + " SumParLine: " + sumParLine);
-
+            totalSumParLine += sumParLine;
         }
+        System.out.println(" TotalSumParLine: " + totalSumParLine);
         System.out.println();
 
-        int sumUnParLine;
+        int totalSumUnParLine = 0;
         for (int i = 1; i < matrix.length; i = i + 2) {
-            sumUnParLine = 0;
+            int sumUnParLine = 0;
             for (int j = 0; j < matrix.length; j++) {
                 sumUnParLine += matrix[i][j];
             }
             System.out.println(i + " SumUnParLine: " + sumUnParLine);
+            totalSumUnParLine += sumUnParLine;
         }
+        System.out.println(" TotalSumUnParLine: " + totalSumUnParLine);
         System.out.println();
 
         int multParColum;
@@ -63,7 +66,6 @@ public class MultiDimensionArrays {
             System.out.println(j + " MultUnParColum: " + multUnParColum);
         }
         System.out.println();
-
 
     }
 }
