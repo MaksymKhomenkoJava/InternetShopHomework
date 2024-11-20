@@ -46,25 +46,29 @@ public class MultiDimensionArrays {
         System.out.println(" TotalSumUnParLine: " + totalSumUnParLine);
         System.out.println();
 
-        int multParColum;
+        int totalMultParColum = 1;
         for (int j = 0; j < matrix.length; j = j + 2) {
-            multParColum = 1;
+            int multParColum = 1;
             for (int i = 0; i < matrix.length; i++) {
                 multParColum = multParColum * matrix[i][j];
-
             }
             System.out.println(j + " MultParColum: " + multParColum);
+            totalMultParColum = totalMultParColum * multParColum;
         }
+        System.out.println(" TotalMultParColum: " + totalMultParColum);
         System.out.println();
-        int multUnParColum;
+
+        int totalMultUnParColum = 1;
         for (int j = 1; j < matrix.length; j = j + 2) {
-            multUnParColum = 1;
+            int multUnParColum = 1;
             for (int i = 0; i < matrix.length; i++) {
                 multUnParColum = multUnParColum * matrix[i][j];
 
             }
             System.out.println(j + " MultUnParColum: " + multUnParColum);
+            totalMultUnParColum = totalMultUnParColum * multUnParColum;
         }
+        System.out.println(" TotalMultUnParColum: " + totalMultUnParColum);
         System.out.println();
 
     }
