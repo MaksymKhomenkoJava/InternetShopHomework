@@ -22,83 +22,62 @@ public class MultiDimensionArrays {
         }
         System.out.println("_________________________________________");
 
-        System.out.println("Total Sum Pared Line: " + countSumPairedLines(matrix));
+        System.out.println("Total Sum Pared Line: " + countSumLines(matrix, 0));
         System.out.println();
 
-        System.out.println("Total Sum Odd Line: " + countSumNotPairedLines(matrix));
+        System.out.println("Total Sum Odd Line: " + countSumLines(matrix, 1));
         System.out.println();
 
-        System.out.println("Total Multiplication Pared Colum: " + multiplyPairedColumns(matrix));
+        System.out.println("Total Multiplication Pared Colum: " + multiplyColumns(matrix, 0));
         System.out.println();
 
-        System.out.println("Total Multiplication UnPared Colum: " + multiplyUnPairedColumns(matrix));
+        System.out.println("Total Multiplication UnPared Colum: " + multiplyColumns(matrix, 1));
         System.out.println();
 
         int lineMagicSqare = calculateSumLines(matrix);
         int columnMagicSqare = calculateSumColumns(matrix);
         if (lineMagicSqare == columnMagicSqare) {
             System.out.println("==Calculate the sum of the diagonals and compare with the available sums==");
-            } else {
+        } else {
             System.out.println("==Matrix is not a magic square==");
         }
         System.out.println();
 
     }
 
-    public static int countSumPairedLines(int[][] matrix) {
-        int totalSumParLine = 0;
-        for (int i = 0; i < matrix.length; i = i + 2) {
-            int sumParLine = 0;
+    public static int countSumLines(int[][] matrix, int index) {
+        int totalSumLine = 0;
+        for (int i = index; i < matrix.length; i = i + 2) {
+            int sumLine = 0;
             for (int j = 0; j < matrix.length; j++) {
-                sumParLine += matrix[i][j];
+                sumLine += matrix[i][j];
             }
-            System.out.println(i + " SumParLine: " + sumParLine);
-            totalSumParLine += sumParLine;
+            if (i % 2 == 0) {
+                System.out.println(i + " SumParLine: " + sumLine);
+            } else {
+                System.out.println(i + " SumUnParLine: " + sumLine);
+            }
+            totalSumLine += sumLine;
         }
-        return totalSumParLine;
+        return totalSumLine;
 
     }
 
-    public static int countSumNotPairedLines(int[][] matrix) {
-        int totalSumUnParLine = 0;
-        for (int i = 1; i < matrix.length; i = i + 2) {
-            int sumUnParLine = 0;
-            for (int j = 0; j < matrix.length; j++) {
-                sumUnParLine += matrix[i][j];
-            }
-            System.out.println(i + " SumUnParLine: " + sumUnParLine);
-            totalSumUnParLine += sumUnParLine;
-        }
-        return totalSumUnParLine;
-
-
-    }
-
-    public static int multiplyPairedColumns(int[][] matrix) {
-        int totalMultParColum = 1;
-        for (int j = 0; j < matrix.length; j = j + 2) {
-            int multParColum = 1;
+    public static long multiplyColumns(int[][] matrix, int index) {
+        int totalMultColum = 1;
+        for (int j = index; j < matrix.length; j = j + 2) {
+            int multColum = 1;
             for (int i = 0; i < matrix.length; i++) {
-                multParColum = multParColum * matrix[i][j];
+                multColum = multColum * matrix[i][j];
             }
-            System.out.println(j + " MultParColum: " + multParColum);
-            totalMultParColum = totalMultParColum * multParColum;
-        }
-        return totalMultParColum;
-    }
-
-    public static int multiplyUnPairedColumns(int[][] matrix) {
-        int totalMultUnParColum = 1;
-        for (int j = 1; j < matrix.length; j = j + 2) {
-            int multUnParColum = 1;
-            for (int i = 0; i < matrix.length; i++) {
-                multUnParColum = multUnParColum * matrix[i][j];
-
+            if (j % 2 == 0) {
+                System.out.println(j + " MultParColum: " + multColum);
+            } else {
+                System.out.println(j + " MultUnParColum: " + multColum);
             }
-            System.out.println(j + " MultUnParColum: " + multUnParColum);
-            totalMultUnParColum = totalMultUnParColum * multUnParColum;
+            totalMultColum = totalMultColum * multColum;
         }
-        return totalMultUnParColum;
+        return totalMultColum;
     }
 
     public static int calculateSumLines(int[][] matrix) {
