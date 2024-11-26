@@ -30,6 +30,10 @@ public class MethodsPrograms {
         double b = Double.parseDouble(scanner.nextLine());
         System.out.println("Result a^b equal: " + calculateNumberPower(a, b));
 
+        System.out.println("Enter the text and number of conclusions: ");
+        String text = scanner.nextLine();
+        int n = scanner.nextInt();
+
 
     }
 
@@ -57,13 +61,19 @@ public class MethodsPrograms {
         return sumArray;
     }
 
-
     public static String reverseWord(String str) {
         return new StringBuilder(str).reverse().toString();
     }
 
     public static Double calculateNumberPower(double a, double b) {
         return Math.pow(a, b);
+    }
+
+    public static void printTextMultipleTimes(String text, int n) {
+        for (int i = 0; i < n; i++) {
+
+        }
+        System.out.println(text);
     }
 
 }
