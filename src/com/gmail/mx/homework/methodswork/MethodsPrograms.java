@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class MethodsPrograms {
     public static void main(String[] args) {
 
-        System.out.println("Enter an integer: ");
-
         Scanner scanner = new Scanner(System.in);
-        int value = scanner.nextInt();
 
+        System.out.println("Enter an integer: ");
+        int value = scanner.nextInt();
         System.out.println("Number squared " + value + " equals " + pow(value));
 
         System.out.println("Enter an radius and height cylinder: ");
@@ -21,9 +20,10 @@ public class MethodsPrograms {
         int number = scanner.nextInt();
         System.out.println("Sum array elements: " + sumArray(number));
 
+        scanner.nextLine();
         System.out.println("Enter the word: ");
         String str = scanner.nextLine();
-        System.out.println("Reverse word: " + reverseWord(str));
+        System.out.println("Reverse word: \n" + reverseWord(str));
 
     }
 
@@ -52,8 +52,8 @@ public class MethodsPrograms {
     }
 
 
-    public static String reverseWord(String word) {
-        return new StringBuilder(word).reverse().toString();
+    public static String reverseWord(String str) {
+        return new StringBuilder(str).reverse().toString();
     }
 
 }
