@@ -33,7 +33,7 @@ public class MethodsPrograms {
         System.out.println("Enter the text and number of conclusions: ");
         String text = scanner.nextLine();
         int n = scanner.nextInt();
-
+        printTextMultipleTimes(text,n);
 
     }
 
@@ -72,6 +72,7 @@ public class MethodsPrograms {
     public static void printTextMultipleTimes(String text, int n) {
 
         for (int i = 0; i < n; i++) {
+
             System.out.println(text);
         }
 
