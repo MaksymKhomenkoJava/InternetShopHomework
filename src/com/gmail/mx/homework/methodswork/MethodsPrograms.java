@@ -70,10 +70,11 @@ public class MethodsPrograms {
     }
 
     public static void printTextMultipleTimes(String text, int n) {
-        for (int i = 0; i < n; i++) {
 
+        for (int i = 0; i < n; i++) {
+            System.out.println(text);
         }
-        System.out.println(text);
+
     }
 
 }
