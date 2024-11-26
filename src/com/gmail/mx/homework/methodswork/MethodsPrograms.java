@@ -25,6 +25,12 @@ public class MethodsPrograms {
         String str = scanner.nextLine();
         System.out.println("Reverse word: \n" + reverseWord(str));
 
+        System.out.println("Enter number a and number b: ");
+        double a = Double.parseDouble(scanner.nextLine());
+        double b = Double.parseDouble(scanner.nextLine());
+        System.out.println("Result a^b equal: " + calculateNumberPower(a, b));
+
+
     }
 
     public static int pow(int value) {
@@ -54,6 +60,10 @@ public class MethodsPrograms {
 
     public static String reverseWord(String str) {
         return new StringBuilder(str).reverse().toString();
+    }
+
+    public static Double calculateNumberPower(double a, double b) {
+        return Math.pow(a, b);
     }
 
 }
