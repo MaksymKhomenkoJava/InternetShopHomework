@@ -21,9 +21,10 @@ public class MethodsPrograms {
         int number = scanner.nextInt();
         System.out.println("Sum array elements: " + sumArray(number));
 
+        System.out.println("Enter the word: ");
+        String str = scanner.nextLine();
+        System.out.println("Reverse word: " + reverseWord(str));
 
-//        String[] lines = {"=PRINT METHOD="};
-//        System.out.println("=" + reversString(lines) + "=");
     }
 
     public static int pow(int value) {
@@ -51,16 +52,9 @@ public class MethodsPrograms {
     }
 
 
-//    public static String reversString(String[] lines) {
-////        lines[i] = lines.toString();
-//        StringBuilder sb = new StringBuilder(lines);
-//        reversedS
-//        String result = "";
-//        for (int i = 0; i < lines.length-1; i--) {
-//            result = result + lines[i];
-//        }
-//        return result;
-//    }
+    public static String reverseWord(String word) {
+        return new StringBuilder(word).reverse().toString();
+    }
 
 }
 
