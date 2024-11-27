@@ -13,6 +13,7 @@ public class Person {
     public void print(){
         System.out.println("Name: " + name + ", Age: " + age + ", Profession: " + profession);
     }
+
     public void newProfession(String newJob){
         profession = newJob;
     }
