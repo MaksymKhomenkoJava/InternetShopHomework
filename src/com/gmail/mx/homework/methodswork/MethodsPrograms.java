@@ -33,14 +33,17 @@ public class MethodsPrograms {
         System.out.println("Enter the text and number of conclusions: ");
         String text = scanner.nextLine();
         int n = scanner.nextInt();
-        print(text,n);
+        print(text, n);
     }
+
     public static int square(int value) {
         return value * value;
     }
+
     public static double calculateCylinderVolume(double radius, double height) {
         return Math.PI * radius * radius * height;
     }
+
     public static int sum(int number) {
         int[] array = new int[number];
         System.out.print("Array: ");
@@ -49,6 +52,7 @@ public class MethodsPrograms {
             array[i] = (int) (Math.random() * 100);
             System.out.print(array[i] + " ");
         }
+
         System.out.println(" ");
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
