@@ -23,7 +23,7 @@ public class MethodsPrograms {
         scanner.nextLine();
         System.out.println("Enter the word: ");
         String str = scanner.nextLine();
-        System.out.println("Reverse word: \n" + reverseWord(str));
+        System.out.println("Reverse word: \n" + reverse(str));
 
         System.out.println("Enter number a and number b: ");
         double a = Double.parseDouble(scanner.nextLine());
@@ -33,7 +33,7 @@ public class MethodsPrograms {
         System.out.println("Enter the text and number of conclusions: ");
         String text = scanner.nextLine();
         int n = scanner.nextInt();
-        printTextMultipleTimes(text,n);
+        print(text,n);
     }
     public static int square(int value) {
         return value * value;
@@ -57,7 +57,7 @@ public class MethodsPrograms {
         return sum;
     }
 
-    public static String reverseWord(String str) {
+    public static String reverse(String str) {
         return new StringBuilder(str).reverse().toString();
     }
 
@@ -70,7 +70,7 @@ public class MethodsPrograms {
         return result;
     }
 
-    public static void printTextMultipleTimes(String text, int n) {
+    public static void print(String text, int n) {
         for (int i = 0; i < n; i++) {
             System.out.println(text);
         }
