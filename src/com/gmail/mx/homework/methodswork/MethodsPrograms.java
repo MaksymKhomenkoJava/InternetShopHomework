@@ -18,7 +18,9 @@ public class MethodsPrograms {
 
         System.out.println("Enter array elements: ");
         int number = scanner.nextInt();
-        System.out.println("Sum array elements: " + sum(number));
+        int[] array = new int[number];
+        generate(array);
+        System.out.println("\nSum array elements: " + sum(array));
 
         scanner.nextLine();
         System.out.println("Enter the word: ");
@@ -44,16 +46,15 @@ public class MethodsPrograms {
         return Math.PI * radius * radius * height;
     }
 
-    public static int sum(int number) {
-        int[] array = new int[number];
-        System.out.print("Array: ");
-        System.out.println(" ");
+    public static void generate(int[] array) {
+        System.out.print("Array: \n");
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 100);
             System.out.print(array[i] + " ");
         }
+    }
 
-        System.out.println(" ");
+    public static int sum(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
@@ -62,7 +63,12 @@ public class MethodsPrograms {
     }
 
     public static String reverse(String str) {
-        return new StringBuilder(str).reverse().toString();
+//        return new StringBuilder(str).reverse().toString();
+        String resalt = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            resalt += str.charAt(i);
+        }
+        return resalt;
     }
 
     public static Double calculateNumberPower(double a, double b) {
