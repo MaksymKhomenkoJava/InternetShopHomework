@@ -16,7 +16,7 @@ public class WorkWithClass {
         person1.newProfession("Desinger");
         person1.print();
 
-        System.out.println("3 . ");
+        System.out.println("3. ");
         person1.name = "Sancho";
         person1.print();
 
