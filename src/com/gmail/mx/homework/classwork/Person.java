@@ -1,9 +1,10 @@
 package com.gmail.mx.homework.classwork;
 
 public class Person {
-    private String name;
-    private int age;
-    private String profession;
+    String name;
+    int age;
+    String profession;
+
     public Person(String name, int age, String profession){
         this.name = name;
         this.age = age;
