@@ -9,7 +9,7 @@ public class MethodsPrograms {
 
         System.out.println("Enter an integer: ");
         int value = scanner.nextInt();
-        System.out.println("Number squared " + value + " equals " + pow(value));
+        System.out.println("Number squared " + value + " equals " + square(value));
 
         System.out.println("Enter an radius and height cylinder: ");
         double radius = scanner.nextDouble();
@@ -18,7 +18,7 @@ public class MethodsPrograms {
 
         System.out.println("Enter array elements: ");
         int number = scanner.nextInt();
-        System.out.println("Sum array elements: " + sumArray(number));
+        System.out.println("Sum array elements: " + sum(number));
 
         scanner.nextLine();
         System.out.println("Enter the word: ");
@@ -34,18 +34,14 @@ public class MethodsPrograms {
         String text = scanner.nextLine();
         int n = scanner.nextInt();
         printTextMultipleTimes(text,n);
-
     }
-
-    public static int pow(int value) {
+    public static int square(int value) {
         return value * value;
     }
-
     public static double calculateCylinderVolume(double radius, double height) {
-        return 3.14 * radius * radius * height;
+        return Math.PI * radius * radius * height;
     }
-
-    public static int sumArray(int number) {
+    public static int sum(int number) {
         int[] array = new int[number];
         System.out.print("Array: ");
         System.out.println(" ");
@@ -54,11 +50,11 @@ public class MethodsPrograms {
             System.out.print(array[i] + " ");
         }
         System.out.println(" ");
-        int sumArray = 0;
+        int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            sumArray += array[i];
+            sum += array[i];
         }
-        return sumArray;
+        return sum;
     }
 
     public static String reverseWord(String str) {
@@ -66,13 +62,16 @@ public class MethodsPrograms {
     }
 
     public static Double calculateNumberPower(double a, double b) {
-        return Math.pow(a, b);
+//        return Math.pow(a, b);
+        double result = 1;
+        for (int i = 1; i <= b; i++) {
+            result = result * a;
+        }
+        return result;
     }
 
     public static void printTextMultipleTimes(String text, int n) {
-
         for (int i = 0; i < n; i++) {
-
             System.out.println(text);
         }
 
