@@ -12,7 +12,6 @@ public class WorkWithClass {
         for (Person person : persons) {
             person.print();
         }
-
         System.out.println("2. ");
 
         persons[0].newProfession("Desinger");
