@@ -16,7 +16,7 @@ public class Repeticion {
         System.out.println("Number Unpair Num: " + (array.length - numberPairUnpair(array)));
         maxElement(array);
         minElement(array);
-        System.out.println("Pasha first negative: " + findNegativePasha(array));
+        System.out.println("Var two - first negative: " + findNegativeVarTwo(array));
         findNegativeIndex(array);
     }
 
@@ -45,7 +45,7 @@ public class Repeticion {
         int indexMax = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > array[indexMax]) {
-                array[indexMax] = array[i];
+//                array[indexMax] = array[i];
                 indexMax = i;
             }
         }
@@ -56,7 +56,7 @@ public class Repeticion {
         int indexMin = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < array[indexMin]) {
-                array[indexMin] = array[i];
+//                array[indexMin] = array[i];
                 indexMin = i;
             }
         }
@@ -64,24 +64,27 @@ public class Repeticion {
     }
 
     public static void findNegativeIndex(int[] array) {
-        int index;
-        int firstNegative;
+        int index = -1;
+//        int firstNegative;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-                firstNegative = array[i];
+//                firstNegative = array[i];
                 index = i;
 
-                System.out.println("first negative position " + firstNegative + " and index " + (index));
+                System.out.println("first negative position " + array[index] + " and index " + (index));
                 break;
             }
+        }
+        if (index == -1){
+            System.out.println("Not negative value");
         }
     }
 
 
-    public static int findNegativePasha(int[] array) {
+    public static int findNegativeVarTwo(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-                System.out.println("Pasha first negative position " + i);
+//                System.out.println("Pasha first negative position " + i);
                 return i;
             }
         }
