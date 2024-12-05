@@ -23,6 +23,7 @@ public class TaxOnIncome {
         System.out.println("Tax rate " + rate + " amount EUR: " + betAmount);
 
 
+
     }
 }
 

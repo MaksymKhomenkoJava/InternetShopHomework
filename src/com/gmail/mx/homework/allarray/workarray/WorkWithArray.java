@@ -6,7 +6,7 @@ public class WorkWithArray {
     public static void main(String[] args) {
 
         System.out.println("1. Elements array: ");
-        int[] numbers = new int[20];
+        int[] numbers = new int[5];
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = (int) (Math.random() * 200 - 100);
             System.out.println("index [" + i + "]" + " number " + numbers[i]);
@@ -74,7 +74,7 @@ public class WorkWithArray {
 
         int average = sumAfterFirst / (numbers.length - b);
 
-        System.out.println("9. Arithmetic average : " + average);
+        System.out.println("9.  average : " + average);
 
         int sumArray = 0;
         for (int i = 0; i < numbers.length; i++) {
