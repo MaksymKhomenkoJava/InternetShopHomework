@@ -45,7 +45,6 @@ public class Repeticion {
         int indexMax = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > array[indexMax]) {
-//                array[indexMax] = array[i];
                 indexMax = i;
             }
         }
@@ -56,7 +55,6 @@ public class Repeticion {
         int indexMin = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < array[indexMin]) {
-//                array[indexMin] = array[i];
                 indexMin = i;
             }
         }
