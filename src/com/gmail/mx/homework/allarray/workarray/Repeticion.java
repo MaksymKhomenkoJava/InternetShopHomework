@@ -63,17 +63,14 @@ public class Repeticion {
 
     public static void findNegativeIndex(int[] array) {
         int index = -1;
-//        int firstNegative;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-//                firstNegative = array[i];
                 index = i;
-
                 System.out.println("first negative position " + array[index] + " and index " + (index));
                 break;
             }
         }
-        if (index == -1){
+        if (index == -1) {
             System.out.println("Not negative value");
         }
     }
@@ -82,7 +79,6 @@ public class Repeticion {
     public static int findNegativeVarTwo(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-//                System.out.println("Pasha first negative position " + i);
                 return i;
             }
         }
