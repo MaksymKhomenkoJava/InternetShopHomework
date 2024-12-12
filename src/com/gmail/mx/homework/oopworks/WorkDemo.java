@@ -1,8 +1,6 @@
 package com.gmail.mx.homework.oopworks;
 
-import com.gmail.mx.homework.workwithclass.Person;
-
-public class WorkOop {
+public class WorkDemo {
     public static void main(String[] args) {
         Employee [] employees = {
                 new Employee("Bob Marley", "musician ", "B.Marley@yahoo.com ", 123456789, 35),

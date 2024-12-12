@@ -1,11 +1,11 @@
 package com.gmail.mx.homework.oopworks;
 
 public class Employee {
-    private String name;
-    private String profession;
-    private String email;
-    private long phone;
-    private int age;
+    private final String name;
+    private final String profession;
+    private final String email;
+    private final long phone;
+    private final int age;
 
     public Employee(String name, String profession, String email, long phone, int age) {
         this.name = name;
