@@ -22,10 +22,10 @@ public class MultiDimensionArrays {
         }
         System.out.println("_________________________________________");
 
-        System.out.println("Total Sum Pared Line: " + countSumLines(matrix, 0));
+        System.out.println("Total Sum Pared Line: " + sumLines(matrix, 0));
         System.out.println();
 
-        System.out.println("Total Sum Odd Line: " + countSumLines(matrix, 1));
+        System.out.println("Total Sum Odd Line: " + sumLines(matrix, 1));
         System.out.println();
 
         System.out.println("Total Multiplication Pared Colum: " + multiplyColumns(matrix, 0));
@@ -45,7 +45,7 @@ public class MultiDimensionArrays {
 
     }
 
-    public static int countSumLines(int[][] matrix, int index) {
+    public static int sumLines(int[][] matrix, int index) {
         int totalSumLine = 0;
         for (int i = index; i < matrix.length; i = i + 2) {
             int sumLine = 0;
