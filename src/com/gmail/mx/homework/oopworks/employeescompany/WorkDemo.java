@@ -12,6 +12,5 @@ public class WorkDemo {
             System.out.println(employee);
         }
 
-
     }
 }

@@ -56,8 +56,7 @@ public class Employee {
     }
 
     @Override
-        public String toString() {
-            return "Employee " + " Name: " + name + ", Profession: " + profession + ", E-mail: " + email + ", Phone " + phone + ", Age: " + age;
-        }
-
+    public String toString() {
+        return "Employee " + " Name: " + name + ", Profession: " + profession + ", E-mail: " + email + ", Phone " + phone + ", Age: " + age;
+    }
 }
