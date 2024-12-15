@@ -15,6 +15,10 @@ public class Employee {
         this.age = age;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -53,7 +57,7 @@ public class Employee {
 
     @Override
         public String toString() {
-            return "Employee{" + "Name: " + name + " Profession: " + profession + " E-mail: " + email + " Phone " + phone + " Age: " + age +'}';
+            return "Employee " + " Name: " + name + ", Profession: " + profession + ", E-mail: " + email + ", Phone " + phone + ", Age: " + age;
         }
 
 }
