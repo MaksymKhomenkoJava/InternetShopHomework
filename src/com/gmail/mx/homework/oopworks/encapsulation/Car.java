@@ -1,9 +1,6 @@
-package com.gmail.mx.homework.encapsulation;
+package com.gmail.mx.homework.oopworks.encapsulation;
 
 public class Car {
-
-    public Car() {
-    }
 
     public void start() {
         startElectricity();
@@ -11,6 +8,7 @@ public class Car {
         startFuelSystem();
 
     }
+
     private void startElectricity() {
         System.out.println("Start Electricity");
     }
