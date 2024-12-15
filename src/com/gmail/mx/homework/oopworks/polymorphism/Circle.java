@@ -1,30 +1,35 @@
 package com.gmail.mx.homework.oopworks.polymorphism;
 
-public class Circle {
+public class Circle implements Shape{
 
-    public int radius;
+    public double radius;
 
-    public Circle(int radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public static int areaCircle(int radius) {
-        return (int) (Math.PI * radius);
+    public static double areaCircle(double radius) {
+        return Math.PI * radius * radius;
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
-    @Override
+//    public void print() {
+//        System.out.println("Area Circle: " + areaCircle(radius));
+//    }
+
     public String toString() {
         return "Area Circle: " + areaCircle(radius);
     }
-    public void print() {
-        System.out.println("Area Circle: " + areaCircle(radius));
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 }

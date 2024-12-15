@@ -1,44 +1,40 @@
 package com.gmail.mx.homework.oopworks.polymorphism;
 
-public class Square {
+public class Square implements Shape{
 
-    public int length;
-    public int width;
+    public double side;
 
-    public Square(int length, int width) {
-        this.length = length;
-        this.width = width;
+    public Square(double side) {
+        this.side = side;
+
     }
 
-    public static int areaSquare(int length, int width) {
-        return length * width;
+    public static double areaSquare(double side) {
+        return side * side;
     }
 
-    public int getLength() {
-        return length;
+    public double getSide() {
+        return side;
     }
 
-    public void setLength(int length) {
-        this.length = length;
+    public void setSide(double side) {
+        this.side = side;
     }
 
-    public int getWidth() {
-        return width;
-    }
+//    public void print() {
+//        System.out.println("Area Square: " + areaSquare(side));
+//    }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public void print() {
-        System.out.println("Area Square: " + areaSquare(length, width));
+    public String toString(){
+        return "Side of Square: " + areaSquare(side);
     }
 
     @Override
-    public String toString() {
-        return "Area Square: " + areaSquare(length, width);
+    public double getArea() {
+        return side * side;
     }
 }
+
 
 
 

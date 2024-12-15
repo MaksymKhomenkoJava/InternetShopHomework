@@ -4,31 +4,56 @@ public class GeometricShares {
     public static void main(String[] args) {
 
         System.out.println("Area Geometric Shares: ");
+        System.out.println();
 
         Circle circle = new Circle(10);
-        circle.print();
+        System.out.println(circle);
 
-        Square square = new Square(5, 6);
-        square.print();
+        Square square = new Square(5);
+        System.out.println(square);
 
-        Triangle triangle = new Triangle(4,9);
-        triangle.print();
+        Triagngle triangle = new Triagngle(4, 9);
+        System.out.println(triangle);
 
+        System.out.println();
+        System.out.println("New Area Geometric Shares: ");
         System.out.println();
 
         circle.setRadius(2);
         System.out.println("New value " + circle);
 
-        square.setLength(3);
-        square.setWidth(4);
+        square.setSide(3);
         System.out.println("New value " + square);
 
         triangle.setBase(7);
         triangle.setHeight(6);
         System.out.println("New value " + triangle);
 
+        System.out.println();
+        System.out.println("Array Area Geometric Shares: ");
+        System.out.println();
 
+        Shape [] shapes = new Shape[] {
+                new Circle(1),
+                new Square(1),
+                new Triagngle(1,1)
+        };
+
+        for (Shape shape : shapes) {
+            System.out.println(shape);
+        }
+        System.out.println();
+
+        double totalArea = calculateTotalArea(shapes);
+        System.out.println("Total area array shares " + totalArea);
     }
 
-
+    public static double calculateTotalArea(Shape[] shapes){
+        double totalArea = 0;
+        for (Shape shape : shapes) {
+            totalArea += shape.getArea();
+        }
+        return totalArea;
+    }
 }
+
