@@ -1,4 +1,4 @@
-package com.gmail.mx.homework.oopworks.encapsulation;
+package com.gmail.mx.homework.oopworks.encapsulation.encapsulation;
 
 public class Car {
 

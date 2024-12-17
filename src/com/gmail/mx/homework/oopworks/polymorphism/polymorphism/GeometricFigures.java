@@ -1,9 +1,9 @@
-package com.gmail.mx.homework.oopworks.polymorphism;
+package com.gmail.mx.homework.oopworks.polymorphism.polymorphism;
 
-public class GeometricShares {
+public class GeometricFigures {
     public static void main(String[] args) {
 
-        System.out.println("Area Geometric Shares: ");
+        System.out.println("Area Geometric Figures: ");
         System.out.println();
 
         Circle circle = new Circle(10);
@@ -16,7 +16,7 @@ public class GeometricShares {
         System.out.println(triangle);
 
         System.out.println();
-        System.out.println("New Area Geometric Shares: ");
+        System.out.println("New Area Geometric Figures: ");
         System.out.println();
 
         circle.setRadius(2);
@@ -30,7 +30,7 @@ public class GeometricShares {
         System.out.println("New value " + triangle);
 
         System.out.println();
-        System.out.println("Array Area Geometric Shares: ");
+        System.out.println("Array Area Geometric Figures: ");
         System.out.println();
 
         Shape [] shapes = new Shape[] {
@@ -45,7 +45,7 @@ public class GeometricShares {
         System.out.println();
 
         double totalArea = calculateTotalArea(shapes);
-        System.out.println("Total area array shares " + totalArea);
+        System.out.println("Total area array figures " + totalArea);
     }
 
     public static double calculateTotalArea(Shape[] shapes){

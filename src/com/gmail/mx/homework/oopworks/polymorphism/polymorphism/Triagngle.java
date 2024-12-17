@@ -1,9 +1,9 @@
-package com.gmail.mx.homework.oopworks.polymorphism;
+package com.gmail.mx.homework.oopworks.polymorphism.polymorphism;
 
 public class Triagngle implements Shape {
 
-    public double base;
-    public double height;
+    private double base;
+    private double height;
 
     public Triagngle(double base, double height) {
         this.base = base;
@@ -30,12 +30,8 @@ public class Triagngle implements Shape {
             this.height = height;
         }
 
-//        public void print () {
-//            System.out.println("Area Square: " + areaTriagngle(base, height));
-//        }
-
         public String toString () {
-            return "Area Square: " + areaTriagngle(base, height);
+            return "Area Triagngle: " + areaTriagngle(base, height);
         }
 
         @Override

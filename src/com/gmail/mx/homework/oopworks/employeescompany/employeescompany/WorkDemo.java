@@ -1,4 +1,4 @@
-package com.gmail.mx.homework.oopworks.employeescompany;
+package com.gmail.mx.homework.oopworks.employeescompany.employeescompany;
 
 public class WorkDemo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.gmail.mx.homework.oopworks.employeescompany;
+package com.gmail.mx.homework.oopworks.employeescompany.employeescompany;
 
 public class Employee {
     private String name;

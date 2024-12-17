@@ -1,8 +1,8 @@
-package com.gmail.mx.homework.oopworks.polymorphism;
+package com.gmail.mx.homework.oopworks.polymorphism.polymorphism;
 
 public class Square implements Shape{
 
-    public double side;
+    private double side;
 
     public Square(double side) {
         this.side = side;
@@ -21,12 +21,8 @@ public class Square implements Shape{
         this.side = side;
     }
 
-//    public void print() {
-//        System.out.println("Area Square: " + areaSquare(side));
-//    }
-
     public String toString(){
-        return "Side of Square: " + areaSquare(side);
+        return "Area Square: " + areaSquare(side);
     }
 
     @Override

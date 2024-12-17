@@ -1,8 +1,8 @@
-package com.gmail.mx.homework.oopworks.polymorphism;
+package com.gmail.mx.homework.oopworks.polymorphism.polymorphism;
 
 public class Circle implements Shape{
 
-    public double radius;
+    private double radius;
 
     public Circle(double radius) {
         this.radius = radius;
@@ -20,9 +20,6 @@ public class Circle implements Shape{
         this.radius = radius;
     }
 
-//    public void print() {
-//        System.out.println("Area Circle: " + areaCircle(radius));
-//    }
 
     public String toString() {
         return "Area Circle: " + areaCircle(radius);
