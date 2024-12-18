@@ -33,10 +33,10 @@ public class GeometricFigures {
         System.out.println("Array Area Geometric Figures: ");
         System.out.println();
 
-        Shape [] shapes = new Shape[] {
+        Shape[] shapes = new Shape[]{
                 new Circle(1),
                 new Square(1),
-                new Triagngle(1,1)
+                new Triagngle(1, 1)
         };
 
         for (Shape shape : shapes) {
@@ -48,7 +48,7 @@ public class GeometricFigures {
         System.out.println("Total area array figures " + totalArea);
     }
 
-    public static double calculateTotalArea(Shape[] shapes){
+    public static double calculateTotalArea(Shape[] shapes) {
         double totalArea = 0;
         for (Shape shape : shapes) {
             totalArea += shape.getArea();

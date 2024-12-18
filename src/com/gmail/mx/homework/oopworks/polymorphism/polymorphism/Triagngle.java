@@ -10,32 +10,29 @@ public class Triagngle implements Shape {
         this.height = height;
     }
 
-    public static double areaTriagngle(double base, double height) {
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "Area Triagngle: " + getArea();
+    }
+
+    @Override
+    public double getArea() {
         return (base * height) / 2;
     }
-
-        public double getBase () {
-            return base;
-        }
-
-        public void setBase (double base){
-            this.base = base;
-        }
-
-        public double getHeight () {
-            return height;
-        }
-
-        public void setHeight ( double height){
-            this.height = height;
-        }
-
-        public String toString () {
-            return "Area Triagngle: " + areaTriagngle(base, height);
-        }
-
-        @Override
-        public double getArea () {
-            return (base * height) / 2;
-        }
-    }
+}

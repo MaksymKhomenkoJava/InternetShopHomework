@@ -1,15 +1,11 @@
 package com.gmail.mx.homework.oopworks.polymorphism.polymorphism;
 
-public class Circle implements Shape{
+public class Circle implements Shape {
 
     private double radius;
 
     public Circle(double radius) {
         this.radius = radius;
-    }
-
-    public static double areaCircle(double radius) {
-        return Math.PI * radius * radius;
     }
 
     public double getRadius() {
@@ -20,9 +16,9 @@ public class Circle implements Shape{
         this.radius = radius;
     }
 
-
+    @Override
     public String toString() {
-        return "Area Circle: " + areaCircle(radius);
+        return "Area Circle: " + getArea();
     }
 
     @Override

@@ -1,16 +1,11 @@
 package com.gmail.mx.homework.oopworks.polymorphism.polymorphism;
 
-public class Square implements Shape{
+public class Square implements Shape {
 
     private double side;
 
     public Square(double side) {
         this.side = side;
-
-    }
-
-    public static double areaSquare(double side) {
-        return side * side;
     }
 
     public double getSide() {
@@ -21,8 +16,9 @@ public class Square implements Shape{
         this.side = side;
     }
 
-    public String toString(){
-        return "Area Square: " + areaSquare(side);
+    @Override
+    public String toString() {
+        return "Area Square: " + getArea();
     }
 
     @Override
