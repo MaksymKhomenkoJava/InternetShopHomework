@@ -1,4 +1,4 @@
-package com.gmail.mx.homework.oopworks.polymorphism.polymorphism;
+package com.gmail.mx.homework.oopworks.polymorphism;
 
 public class Circle implements Shape {
 
