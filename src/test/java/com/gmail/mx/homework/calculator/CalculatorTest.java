@@ -1,8 +1,6 @@
 package com.gmail.mx.homework.calculator;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class CalculatorTest {
     //    @Test
@@ -57,6 +55,17 @@ private Calculator calculator;
         calculator = new Calculator();
         System.out.println("beforeeach");
     }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("after each");
+    }
+
+    @AfterAll
+    static void afterAll(){
+        System.out.println("after all");
+    }
+
 
     @Test
     void zero() {
